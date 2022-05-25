@@ -4,29 +4,32 @@ This section provides details for each class and property defined by FARO.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#Condition" title="http://purl.org/faro/Condition">
-            <span>condition</span>
-         </a>
+         <a href="#Condition" title="http://purl.org/faro/Condition">Condition</a>
       </li>
       <li>
-         <a href="#Event" title="http://purl.org/faro/Event">
-            <span>event</span>
-         </a>
+         <a href="#Event" title="http://purl.org/faro/Event">Event</a>
+      </li>
+      <li>
+         <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
+      </li>
+      <li>
+         <a href="#Status" title="http://purl.org/faro/Status">Status</a>
       </li>
    </ul>
    <div class="entity" id="Condition">
-      <h3>condition<sup class="type-c" title="class">c</sup>
+      <h3>Condition<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/Condition</p>
+      <div class="comment">
+         <span class="markdown">The fact of having certain qualities, which may trigger events.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://purl.org/faro/Relata"
-               target="_blank"
-               title="http://purl.org/faro/Relata">relata</a>
+            <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -37,18 +40,19 @@ This section provides details for each class and property defined by FARO.
       </dl>
    </div>
    <div class="entity" id="Event">
-      <h3>event<sup class="type-c" title="class">c</sup>
+      <h3>Event<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/Event</p>
+      <div class="comment">
+         <span class="markdown">A possible or actual event, which can possibly be defined by precise time and space coordinates.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://purl.org/faro/Relata"
-               target="_blank"
-               title="http://purl.org/faro/Relata">relata</a>
+            <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -64,6 +68,62 @@ This section provides details for each class and property defined by FARO.
          <dd>
             <a href="#re-emerges_in" title="http://purl.org/faro/re-emerges_in">re emerges in</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Relata">
+      <h3>Relata<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/Relata</p>
+      <div class="comment">
+         <span class="markdown">Any of the element which can be included in a causal or temporal relationships, being them events (immanent) or facts / conditions  (trascendent),</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Condition" title="http://purl.org/faro/Condition">Condition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://purl.org/faro/Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#status" title="http://purl.org/faro/status">status</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Status">
+      <h3>Status<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/Status</p>
+      <div class="comment">
+         <span class="markdown">Status of a Relata, which can potentially change in time.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#status" title="http://purl.org/faro/status">status</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#happened" title="http://purl.org/faro/happened">happened</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#not_happened" title="http://purl.org/faro/not_happened">not happened</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#planned" title="http://purl.org/faro/planned">planned</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#potential" title="http://purl.org/faro/potential">potential</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -288,7 +348,7 @@ This section provides details for each class and property defined by FARO.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="http://purl.org/faro/Event">event</a>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -461,7 +521,7 @@ This section provides details for each class and property defined by FARO.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="http://purl.org/faro/Event">event</a>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -520,7 +580,7 @@ This section provides details for each class and property defined by FARO.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="http://purl.org/faro/Event">event</a>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -622,16 +682,12 @@ This section provides details for each class and property defined by FARO.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="http://purl.org/faro/Relata"
-                  target="_blank"
-                  title="http://purl.org/faro/Relata">relata</a>
+               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://purl.org/faro/Relata"
-                  target="_blank"
-                  title="http://purl.org/faro/Relata">relata</a>
+               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -756,7 +812,7 @@ This section provides details for each class and property defined by FARO.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="http://purl.org/faro/Event">event</a>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -779,12 +835,12 @@ This section provides details for each class and property defined by FARO.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="http://purl.org/faro/Event">event</a>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Event" title="http://purl.org/faro/Event">event</a>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -801,7 +857,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Condition" title="http://purl.org/faro/Condition">condition</a>
+               <a href="#Condition" title="http://purl.org/faro/Condition">Condition</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -879,16 +935,12 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://purl.org/faro/Relata"
-                  target="_blank"
-                  title="http://purl.org/faro/Relata">relata</a>
+               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://purl.org/faro/Status"
-                  target="_blank"
-                  title="http://purl.org/faro/Status">status</a>
+               <a href="#Status" title="http://purl.org/faro/Status">Status</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -946,9 +998,7 @@ This section provides details for each class and property defined by FARO.
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="http://purl.org/faro/Status"
-               target="_blank"
-               title="http://purl.org/faro/Status">status</a>
+            <a href="#Status" title="http://purl.org/faro/Status">Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -963,9 +1013,7 @@ This section provides details for each class and property defined by FARO.
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="http://purl.org/faro/Status"
-               target="_blank"
-               title="http://purl.org/faro/Status">status</a>
+            <a href="#Status" title="http://purl.org/faro/Status">Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -980,9 +1028,7 @@ This section provides details for each class and property defined by FARO.
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="http://purl.org/faro/Status"
-               target="_blank"
-               title="http://purl.org/faro/Status">status</a>
+            <a href="#Status" title="http://purl.org/faro/Status">Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -997,9 +1043,7 @@ This section provides details for each class and property defined by FARO.
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="http://purl.org/faro/Status"
-               target="_blank"
-               title="http://purl.org/faro/Status">status</a>
+            <a href="#Status" title="http://purl.org/faro/Status">Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

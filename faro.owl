@@ -1,6 +1,5 @@
 @prefix : <http://purl.org/faro/> .
-@prefix dc:	<http://purl.org/dc/elements/1.1/>.
-@prefix dcterms:	<http://purl.org/dc/terms/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -8,21 +7,41 @@
 @prefix faro: <http://purl.org/faro/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://purl.org/faro/> .
 
-<http://purl.org/faro/> rdf:type owl:Ontology;
-      rdfs:label "FARO";
-      dc:title "FARO: Facts and Events Relationship Ontology";
-      dc:description "Ontology for representing different types of relationships between events and conditions";
-      # dc:abstract "tbw";
-      vann:preferredNamespaceUri "http://purl.org/faro/" ;
-      dcterms:creator "EURECOM" ;
-      dcterms:created "25-05-2022"^^xsd:date ;
-      owl:versionInfo "0.1" .
+<http://purl.org/faro/> rdf:type owl:Ontology ;
+                         dc:description "Ontology for representing different types of relationships between events and conditions" ;
+                         dc:title "FARO: Facts and Events Relationship Ontology" ;
+                         dcterms:created "25-05-2022"^^xsd:date ;
+                         dcterms:creator "EURECOM" ;
+                         vann:preferredNamespaceUri "http://purl.org/faro/" ;
+                         rdfs:label "FARO" ;
+                         owl:versionInfo "0.1" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.w3.org/2002/07/owl#maxCardinality
 owl:maxCardinality rdf:type owl:AnnotationProperty .
@@ -217,20 +236,28 @@ faro:variation_of rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/faro/Condition
 faro:Condition rdf:type owl:Class ;
-               rdfs:subClassOf faro:Relata .
+               rdfs:subClassOf faro:Relata ;
+               rdfs:comment "The fact of having certain qualities, which may trigger events." ;
+               rdfs:label "Condition" .
 
 
 ###  http://purl.org/faro/Event
 faro:Event rdf:type owl:Class ;
-           rdfs:subClassOf faro:Relata .
+           rdfs:subClassOf faro:Relata ;
+           rdfs:comment "A possible or actual event, which can possibly be defined by precise time and space coordinates." ;
+           rdfs:label "Event" .
 
 
 ###  http://purl.org/faro/Relata
-faro:Relata rdf:type owl:Class .
+faro:Relata rdf:type owl:Class ;
+            rdfs:comment "Any of the element which can be included in a causal or temporal relationships, being them events (immanent) or facts / conditions  (trascendent)," ;
+            rdfs:label "Relata" .
 
 
 ###  http://purl.org/faro/Status
-faro:Status rdf:type owl:Class .
+faro:Status rdf:type owl:Class ;
+            rdfs:comment "Status of a Relata, which can potentially change in time." ;
+            rdfs:label "Status" .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement

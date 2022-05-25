@@ -240,20 +240,28 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/faro/Condition
 :Condition rdf:type owl:Class ;
-           rdfs:subClassOf :Relata .
+           rdfs:subClassOf :Relata ;
+           rdfs:comment "The fact of having certain qualities, which may trigger events." ;
+           rdfs:label "Condition" .
 
 
 ###  http://purl.org/faro/Event
 :Event rdf:type owl:Class ;
-       rdfs:subClassOf :Relata .
+       rdfs:subClassOf :Relata ;
+       rdfs:comment "A possible or actual event, which can possibly be defined by precise time and space coordinates." ;
+       rdfs:label "Event" .
 
 
 ###  http://purl.org/faro/Relata
-:Relata rdf:type owl:Class .
+:Relata rdf:type owl:Class ;
+        rdfs:comment "Any of the element which can be included in a causal or temporal relationships, being them events (immanent) or facts / conditions  (trascendent)," ;
+        rdfs:label "Relata" .
 
 
 ###  http://purl.org/faro/Status
-:Status rdf:type owl:Class .
+:Status rdf:type owl:Class ;
+        rdfs:comment "Status of a Relata, which can potentially change in time." ;
+        rdfs:label "Status" .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement

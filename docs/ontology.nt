@@ -214,16 +214,24 @@
 # http://purl.org/faro/Condition
 <http://purl.org/faro/Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/faro/Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/faro/Relata> .
+<http://purl.org/faro/Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "The fact of having certain qualities, which may trigger events." .
+<http://purl.org/faro/Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Condition" .
 # 
 # http://purl.org/faro/Event
 <http://purl.org/faro/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/faro/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/faro/Relata> .
+<http://purl.org/faro/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "A possible or actual event, which can possibly be defined by precise time and space coordinates." .
+<http://purl.org/faro/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
 # 
 # http://purl.org/faro/Relata
 <http://purl.org/faro/Relata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/faro/Relata> <http://www.w3.org/2000/01/rdf-schema#comment> "Any of the element which can be included in a causal or temporal relationships, being them events (immanent) or facts / conditions  (trascendent)," .
+<http://purl.org/faro/Relata> <http://www.w3.org/2000/01/rdf-schema#label> "Relata" .
 # 
 # http://purl.org/faro/Status
 <http://purl.org/faro/Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/faro/Status> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of a Relata, which can potentially change in time." .
+<http://purl.org/faro/Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status" .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
