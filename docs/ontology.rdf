@@ -1,15 +1,21 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.org/faro/"
      xml:base="http://purl.org/faro/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/faro/">
+        <dc:description>Ontology for representing different types of relationships between events and conditions</dc:description>
+        <dc:title>FARO: Facts and Events Relationship Ontology</dc:title>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">25-05-2022</terms:created>
+        <terms:creator>EURECOM</terms:creator>
         <vann:preferredNamespaceUri>http://purl.org/faro/</vann:preferredNamespaceUri>
-        <rdfs:label>FARO: Facts and Events Relationship Ontology</rdfs:label>
+        <rdfs:label>FARO</rdfs:label>
         <owl:versionInfo>0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -27,6 +33,34 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
 
@@ -38,6 +72,25 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 

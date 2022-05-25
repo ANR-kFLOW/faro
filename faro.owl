@@ -1,4 +1,6 @@
 @prefix : <http://purl.org/faro/> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix dcterms:	<http://purl.org/dc/terms/>.
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -9,8 +11,13 @@
 @base <http://purl.org/faro/> .
 
 <http://purl.org/faro/> rdf:type owl:Ontology;
-      rdfs:label "FARO: Facts and Events Relationship Ontology";
+      rdfs:label "FARO";
+      dc:title "FARO: Facts and Events Relationship Ontology";
+      dc:description "Ontology for representing different types of relationships between events and conditions";
+      # dc:abstract "tbw";
       vann:preferredNamespaceUri "http://purl.org/faro/" ;
+      dcterms:creator "EURECOM" ;
+      dcterms:created "25-05-2022"^^xsd:date ;
       owl:versionInfo "0.1" .
 
 #################################################################

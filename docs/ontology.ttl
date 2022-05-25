@@ -7,13 +7,33 @@
 @base <http://purl.org/faro/> .
 
 <http://purl.org/faro/> rdf:type owl:Ontology ;
+                         <http://purl.org/dc/elements/1.1/description> "Ontology for representing different types of relationships between events and conditions" ;
+                         <http://purl.org/dc/elements/1.1/title> "FARO: Facts and Events Relationship Ontology" ;
+                         <http://purl.org/dc/terms/created> "25-05-2022"^^xsd:date ;
+                         <http://purl.org/dc/terms/creator> "EURECOM" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/faro/" ;
-                         rdfs:label "FARO: Facts and Events Relationship Ontology" ;
+                         rdfs:label "FARO" ;
                          owl:versionInfo "0.1" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
@@ -21,6 +41,14 @@
 
 ###  http://www.w3.org/2002/07/owl#maxCardinality
 owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
