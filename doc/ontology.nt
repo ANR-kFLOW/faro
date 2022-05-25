@@ -1,0 +1,228 @@
+<http://purl.org/faro/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/faro/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/faro/" .
+<http://purl.org/faro/> <http://www.w3.org/2000/01/rdf-schema#label> "FARO: Facts and Events Relationship Ontology" .
+<http://purl.org/faro/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#maxCardinality
+<http://www.w3.org/2002/07/owl#maxCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/faro/alternative_to
+<http://purl.org/faro/alternative_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/alternative_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_comparatively_related_to> .
+<http://purl.org/faro/alternative_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+# 
+# http://purl.org/faro/before
+<http://purl.org/faro/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/before> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_temporally_related_to> .
+<http://purl.org/faro/before> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/faro/contains> .
+<http://purl.org/faro/before> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/faro/simoultaneous_to> .
+# 
+# http://purl.org/faro/causes
+<http://purl.org/faro/causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/causes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_contingently_related_to> .
+<http://purl.org/faro/causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://purl.org/faro/causes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+<http://purl.org/faro/causes> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/faro/does_not_cause> .
+# 
+# http://purl.org/faro/compared_to
+<http://purl.org/faro/compared_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/compared_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_comparatively_related_to> .
+# 
+# http://purl.org/faro/competes_with
+<http://purl.org/faro/competes_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/competes_with> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_comparatively_related_to> .
+# 
+# http://purl.org/faro/contains
+<http://purl.org/faro/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_temporally_related_to> .
+# 
+# http://purl.org/faro/contrasting_version_of
+<http://purl.org/faro/contrasting_version_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/contrasting_version_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_comparatively_related_to> .
+# 
+# http://purl.org/faro/coreference_of
+<http://purl.org/faro/coreference_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/coreference_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_mereologically_related_to> .
+<http://purl.org/faro/coreference_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+# 
+# http://purl.org/faro/correlates_with
+<http://purl.org/faro/correlates_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/correlates_with> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_contingently_related_to> .
+<http://purl.org/faro/correlates_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/correlates_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# http://purl.org/faro/dissimilar_to
+<http://purl.org/faro/dissimilar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/dissimilar_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/compared_to> .
+<http://purl.org/faro/dissimilar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+# 
+# http://purl.org/faro/does_not_cause
+<http://purl.org/faro/does_not_cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_contingently_related_to> .
+<http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+# 
+# http://purl.org/faro/enables
+<http://purl.org/faro/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/enables> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_contingently_related_to> .
+<http://purl.org/faro/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+# 
+# http://purl.org/faro/ends
+<http://purl.org/faro/ends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/ends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contains> .
+# 
+# http://purl.org/faro/intends_to_cause
+<http://purl.org/faro/intends_to_cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/intends_to_cause> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_contingently_related_to> .
+<http://purl.org/faro/intends_to_cause> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+# 
+# http://purl.org/faro/is_comparatively_related_to
+<http://purl.org/faro/is_comparatively_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/is_comparatively_related_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_related_to> .
+# 
+# http://purl.org/faro/is_contingently_related_to
+<http://purl.org/faro/is_contingently_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/is_contingently_related_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_related_to> .
+# 
+# http://purl.org/faro/is_mereologically_related_to
+<http://purl.org/faro/is_mereologically_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/is_mereologically_related_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_related_to> .
+# 
+# http://purl.org/faro/is_related_to
+<http://purl.org/faro/is_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/is_related_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Relata> .
+<http://purl.org/faro/is_related_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Relata> .
+# 
+# http://purl.org/faro/is_temporally_related_to
+<http://purl.org/faro/is_temporally_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/is_temporally_related_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_related_to> .
+# 
+# http://purl.org/faro/meets
+<http://purl.org/faro/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/before> .
+# 
+# http://purl.org/faro/opposite_to
+<http://purl.org/faro/opposite_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/opposite_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/dissimilar_to> .
+<http://purl.org/faro/opposite_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+# 
+# http://purl.org/faro/overlaps
+<http://purl.org/faro/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/overlaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_temporally_related_to> .
+# 
+# http://purl.org/faro/part_of
+<http://purl.org/faro/part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/part_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_mereologically_related_to> .
+<http://purl.org/faro/part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# http://purl.org/faro/prevents
+<http://purl.org/faro/prevents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/prevents> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/does_not_cause> .
+<http://purl.org/faro/prevents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://purl.org/faro/prevents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+# 
+# http://purl.org/faro/re-emerges_in
+<http://purl.org/faro/re-emerges_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_mereologically_related_to> .
+<http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+<http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Event> .
+# 
+# http://purl.org/faro/results_in
+<http://purl.org/faro/results_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/results_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Condition> .
+<http://purl.org/faro/results_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+# 
+# http://purl.org/faro/similar_to
+<http://purl.org/faro/similar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/similar_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/compared_to> .
+<http://purl.org/faro/similar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+# 
+# http://purl.org/faro/simoultaneous_to
+<http://purl.org/faro/simoultaneous_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/simoultaneous_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_temporally_related_to> .
+# 
+# http://purl.org/faro/starts
+<http://purl.org/faro/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/starts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contains> .
+# 
+# http://purl.org/faro/status
+<http://purl.org/faro/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Relata> .
+<http://purl.org/faro/status> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Status> .
+<http://purl.org/faro/status> <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# http://purl.org/faro/variation_of
+<http://purl.org/faro/variation_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/variation_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/is_mereologically_related_to> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/faro/Condition
+<http://purl.org/faro/Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/faro/Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/faro/Relata> .
+# 
+# http://purl.org/faro/Event
+<http://purl.org/faro/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/faro/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/faro/Relata> .
+# 
+# http://purl.org/faro/Relata
+<http://purl.org/faro/Relata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/faro/Status
+<http://purl.org/faro/Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/faro/happened
+<http://purl.org/faro/happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/faro/happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/faro/Status> .
+# 
+# http://purl.org/faro/not_happened
+<http://purl.org/faro/not_happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/faro/not_happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/faro/Status> .
+# 
+# http://purl.org/faro/planned
+<http://purl.org/faro/planned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/faro/planned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/faro/Status> .
+# 
+# http://purl.org/faro/potential
+<http://purl.org/faro/potential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/faro/potential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/faro/Status> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

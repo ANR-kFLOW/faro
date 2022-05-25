@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/faro/"
+     xml:base="http://purl.org/faro/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="http://purl.org/faro/">
+        <vann:preferredNamespaceUri>http://purl.org/faro/</vann:preferredNamespaceUri>
+        <rdfs:label>FARO: Facts and Events Relationship Ontology</rdfs:label>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/faro/alternative_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/alternative_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/before -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/before">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+        <owl:propertyDisjointWith rdf:resource="http://purl.org/faro/contains"/>
+        <owl:propertyDisjointWith rdf:resource="http://purl.org/faro/simoultaneous_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/causes -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/causes">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
+        <owl:propertyDisjointWith rdf:resource="http://purl.org/faro/does_not_cause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/compared_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/compared_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/competes_with -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/competes_with">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/contains">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/contrasting_version_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/contrasting_version_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/coreference_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/coreference_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/correlates_with -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/correlates_with">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/dissimilar_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/dissimilar_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/compared_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/does_not_cause -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/does_not_cause">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/enables -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/enables">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/ends -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/ends">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/intends_to_cause -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/intends_to_cause">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/is_comparatively_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_comparatively_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/is_contingently_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_contingently_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/is_mereologically_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_mereologically_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/is_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_related_to">
+        <rdfs:domain rdf:resource="http://purl.org/faro/Relata"/>
+        <rdfs:range rdf:resource="http://purl.org/faro/Relata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/is_temporally_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_temporally_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/meets -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/meets">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/before"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/opposite_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/opposite_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/dissimilar_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/overlaps -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/overlaps">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/part_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/part_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/prevents -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/prevents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/does_not_cause"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/re-emerges_in -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/re-emerges_in">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
+        <rdfs:range rdf:resource="http://purl.org/faro/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/results_in -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/results_in">
+        <rdfs:domain rdf:resource="http://purl.org/faro/Condition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/similar_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/similar_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/compared_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/simoultaneous_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/simoultaneous_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/starts -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/starts">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/status -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/status">
+        <rdfs:domain rdf:resource="http://purl.org/faro/Relata"/>
+        <rdfs:range rdf:resource="http://purl.org/faro/Status"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/variation_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/variation_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/faro/Condition -->
+
+
+    <owl:Class rdf:about="http://purl.org/faro/Condition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/faro/Relata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/faro/Event -->
+
+
+    <owl:Class rdf:about="http://purl.org/faro/Event">
+        <rdfs:subClassOf rdf:resource="http://purl.org/faro/Relata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/faro/Relata -->
+
+
+    <owl:Class rdf:about="http://purl.org/faro/Relata"/>
+    
+
+
+    <!-- http://purl.org/faro/Status -->
+
+
+    <owl:Class rdf:about="http://purl.org/faro/Status"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/faro/happened -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/faro/happened">
+        <rdf:type rdf:resource="http://purl.org/faro/Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/faro/not_happened -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/faro/not_happened">
+        <rdf:type rdf:resource="http://purl.org/faro/Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/faro/planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/faro/planned">
+        <rdf:type rdf:resource="http://purl.org/faro/Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/faro/potential -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/faro/potential">
+        <rdf:type rdf:resource="http://purl.org/faro/Status"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

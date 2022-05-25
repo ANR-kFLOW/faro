@@ -1,0 +1,259 @@
+@prefix : <http://purl.org/faro/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/faro/> .
+
+<http://purl.org/faro/> rdf:type owl:Ontology ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/faro/" ;
+                         rdfs:label "FARO: Facts and Events Relationship Ontology" ;
+                         owl:versionInfo "0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#maxCardinality
+owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/faro/alternative_to
+:alternative_to rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :is_comparatively_related_to ;
+                rdf:type owl:SymmetricProperty .
+
+
+###  http://purl.org/faro/before
+:before rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :is_temporally_related_to ;
+        owl:propertyDisjointWith :contains ,
+                                 :simoultaneous_to .
+
+
+###  http://purl.org/faro/causes
+:causes rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :is_contingently_related_to ;
+        rdf:type owl:AsymmetricProperty ;
+        rdfs:domain :Event ;
+        owl:propertyDisjointWith :does_not_cause .
+
+
+###  http://purl.org/faro/compared_to
+:compared_to rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :is_comparatively_related_to .
+
+
+###  http://purl.org/faro/competes_with
+:competes_with rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is_comparatively_related_to .
+
+
+###  http://purl.org/faro/contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :is_temporally_related_to .
+
+
+###  http://purl.org/faro/contrasting_version_of
+:contrasting_version_of rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :is_comparatively_related_to .
+
+
+###  http://purl.org/faro/coreference_of
+:coreference_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :is_mereologically_related_to ;
+                rdf:type owl:SymmetricProperty .
+
+
+###  http://purl.org/faro/correlates_with
+:correlates_with rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :is_contingently_related_to ;
+                 rdf:type owl:SymmetricProperty ,
+                          owl:TransitiveProperty .
+
+
+###  http://purl.org/faro/dissimilar_to
+:dissimilar_to rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :compared_to ;
+               rdf:type owl:SymmetricProperty .
+
+
+###  http://purl.org/faro/does_not_cause
+:does_not_cause rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :is_contingently_related_to ;
+                rdfs:domain :Event .
+
+
+###  http://purl.org/faro/enables
+:enables rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :is_contingently_related_to ;
+         rdf:type owl:AsymmetricProperty .
+
+
+###  http://purl.org/faro/ends
+:ends rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :contains .
+
+
+###  http://purl.org/faro/intends_to_cause
+:intends_to_cause rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :is_contingently_related_to ;
+                  rdfs:domain :Event .
+
+
+###  http://purl.org/faro/is_comparatively_related_to
+:is_comparatively_related_to rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :is_related_to .
+
+
+###  http://purl.org/faro/is_contingently_related_to
+:is_contingently_related_to rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :is_related_to .
+
+
+###  http://purl.org/faro/is_mereologically_related_to
+:is_mereologically_related_to rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :is_related_to .
+
+
+###  http://purl.org/faro/is_related_to
+:is_related_to rdf:type owl:ObjectProperty ;
+               rdfs:domain :Relata ;
+               rdfs:range :Relata .
+
+
+###  http://purl.org/faro/is_temporally_related_to
+:is_temporally_related_to rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :is_related_to .
+
+
+###  http://purl.org/faro/meets
+:meets rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :before .
+
+
+###  http://purl.org/faro/opposite_to
+:opposite_to rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :dissimilar_to ;
+             rdf:type owl:SymmetricProperty .
+
+
+###  http://purl.org/faro/overlaps
+:overlaps rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :is_temporally_related_to .
+
+
+###  http://purl.org/faro/part_of
+:part_of rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :is_mereologically_related_to ;
+         rdf:type owl:TransitiveProperty .
+
+
+###  http://purl.org/faro/prevents
+:prevents rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :does_not_cause ;
+          rdf:type owl:AsymmetricProperty ;
+          rdfs:domain :Event .
+
+
+###  http://purl.org/faro/re-emerges_in
+:re-emerges_in rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is_mereologically_related_to ;
+               rdfs:domain :Event ;
+               rdfs:range :Event .
+
+
+###  http://purl.org/faro/results_in
+:results_in rdf:type owl:ObjectProperty ;
+            rdfs:domain :Condition ;
+            rdfs:range rdf:Statement .
+
+
+###  http://purl.org/faro/similar_to
+:similar_to rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :compared_to ;
+            rdf:type owl:SymmetricProperty .
+
+
+###  http://purl.org/faro/simoultaneous_to
+:simoultaneous_to rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :is_temporally_related_to .
+
+
+###  http://purl.org/faro/starts
+:starts rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :contains .
+
+
+###  http://purl.org/faro/status
+:status rdf:type owl:ObjectProperty ;
+        rdfs:domain :Relata ;
+        rdfs:range :Status ;
+        owl:maxCardinality "1"^^xsd:nonNegativeInteger .
+
+
+###  http://purl.org/faro/variation_of
+:variation_of rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :is_mereologically_related_to .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/faro/Condition
+:Condition rdf:type owl:Class ;
+           rdfs:subClassOf :Relata .
+
+
+###  http://purl.org/faro/Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :Relata .
+
+
+###  http://purl.org/faro/Relata
+:Relata rdf:type owl:Class .
+
+
+###  http://purl.org/faro/Status
+:Status rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+rdf:Statement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/faro/happened
+:happened rdf:type owl:NamedIndividual ,
+                   :Status .
+
+
+###  http://purl.org/faro/not_happened
+:not_happened rdf:type owl:NamedIndividual ,
+                       :Status .
+
+
+###  http://purl.org/faro/planned
+:planned rdf:type owl:NamedIndividual ,
+                  :Status .
+
+
+###  http://purl.org/faro/potential
+:potential rdf:type owl:NamedIndividual ,
+                    :Status .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
