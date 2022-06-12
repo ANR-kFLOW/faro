@@ -8,13 +8,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann1="http://purl.org/vocab/vann/vann:">
     <owl:Ontology rdf:about="http://purl.org/faro/">
         <dc:description>Ontology for representing different types of relationships between events and conditions</dc:description>
         <dc:title>FARO: Facts and Events Relationship Ontology</dc:title>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">25-05-2022</terms:created>
         <terms:creator>EURECOM</terms:creator>
+        <terms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <vann:preferredNamespaceUri>http://purl.org/faro/</vann:preferredNamespaceUri>
+        <vann1:preferredNamespacePrefix>faro</vann1:preferredNamespacePrefix>
         <rdfs:label>FARO</rdfs:label>
         <owl:versionInfo>0.1</owl:versionInfo>
     </owl:Ontology>
@@ -61,10 +64,24 @@
     
 
 
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/vann:preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/vann:preferredNamespacePrefix"/>
     
 
 
@@ -110,7 +127,13 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/alternative_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/comparatively_related_to"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/faro/comparatively_related_to"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/faro/alternative_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
@@ -120,7 +143,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/before">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/temporally_related_to"/>
         <owl:propertyDisjointWith rdf:resource="http://purl.org/faro/contains"/>
         <owl:propertyDisjointWith rdf:resource="http://purl.org/faro/simoultaneous_to"/>
     </owl:ObjectProperty>
@@ -131,10 +154,23 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/causes">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contingently_related_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
         <owl:propertyDisjointWith rdf:resource="http://purl.org/faro/does_not_cause"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/faro/correlates_with"/>
+            <rdf:Description rdf:about="http://purl.org/faro/causes"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/comparatively_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/comparatively_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/related_to"/>
     </owl:ObjectProperty>
     
 
@@ -143,7 +179,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/compared_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/comparatively_related_to"/>
     </owl:ObjectProperty>
     
 
@@ -152,7 +188,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/competes_with">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/comparatively_related_to"/>
     </owl:ObjectProperty>
     
 
@@ -161,7 +197,16 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/contains">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/temporally_related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/contingently_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/contingently_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/related_to"/>
     </owl:ObjectProperty>
     
 
@@ -170,7 +215,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/contrasting_version_of">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_comparatively_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/comparatively_related_to"/>
     </owl:ObjectProperty>
     
 
@@ -179,7 +224,13 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/coreference_of">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/mereologically_related_to"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/faro/mereologically_related_to"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/faro/coreference_of"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
@@ -189,7 +240,13 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/correlates_with">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contingently_related_to"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/faro/contingently_related_to"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/faro/correlates_with"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
@@ -201,6 +258,12 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/dissimilar_to">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/compared_to"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/faro/compared_to"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/faro/dissimilar_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
@@ -210,7 +273,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/does_not_cause">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contingently_related_to"/>
         <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
     </owl:ObjectProperty>
     
@@ -220,7 +283,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/enables">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contingently_related_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
     </owl:ObjectProperty>
     
@@ -239,54 +302,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/intends_to_cause">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_contingently_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/contingently_related_to"/>
         <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/faro/is_comparatively_related_to -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_comparatively_related_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/faro/is_contingently_related_to -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_contingently_related_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/faro/is_mereologically_related_to -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_mereologically_related_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/faro/is_related_to -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_related_to">
-        <rdfs:domain rdf:resource="http://purl.org/faro/Relata"/>
-        <rdfs:range rdf:resource="http://purl.org/faro/Relata"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/faro/is_temporally_related_to -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/faro/is_temporally_related_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_related_to"/>
     </owl:ObjectProperty>
     
 
@@ -300,11 +317,26 @@
     
 
 
+    <!-- http://purl.org/faro/mereologically_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/mereologically_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/related_to"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/faro/opposite_to -->
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/opposite_to">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/dissimilar_to"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/faro/dissimilar_to"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/faro/opposite_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
@@ -314,7 +346,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/overlaps">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/temporally_related_to"/>
     </owl:ObjectProperty>
     
 
@@ -323,7 +355,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/part_of">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/mereologically_related_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
@@ -344,9 +376,19 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/re-emerges_in">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/mereologically_related_to"/>
         <rdfs:domain rdf:resource="http://purl.org/faro/Event"/>
         <rdfs:range rdf:resource="http://purl.org/faro/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/faro/related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/related_to">
+        <rdfs:domain rdf:resource="http://purl.org/faro/Relata"/>
+        <rdfs:range rdf:resource="http://purl.org/faro/Relata"/>
     </owl:ObjectProperty>
     
 
@@ -366,6 +408,12 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/similar_to">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/compared_to"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/faro/compared_to"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/faro/similar_to"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
@@ -375,7 +423,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/simoultaneous_to">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_temporally_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/temporally_related_to"/>
     </owl:ObjectProperty>
     
 
@@ -400,11 +448,20 @@
     
 
 
+    <!-- http://purl.org/faro/temporally_related_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/temporally_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/related_to"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/faro/variation_of -->
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/variation_of">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/is_mereologically_related_to"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/mereologically_related_to"/>
     </owl:ObjectProperty>
     
 

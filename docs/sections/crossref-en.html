@@ -90,13 +90,13 @@ This section provides details for each class and property defined by FARO.
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
+            <a href="#related_to" title="http://purl.org/faro/related_to">related to</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#status" title="http://purl.org/faro/status">status</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
+            <a href="#related_to" title="http://purl.org/faro/related_to">related to</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -146,6 +146,11 @@ This section provides details for each class and property defined by FARO.
          </a>
       </li>
       <li>
+         <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">
+            <span>comparatively related to</span>
+         </a>
+      </li>
+      <li>
          <a href="#compared_to" title="http://purl.org/faro/compared_to">
             <span>compared to</span>
          </a>
@@ -158,6 +163,11 @@ This section provides details for each class and property defined by FARO.
       <li>
          <a href="#contains" title="http://purl.org/faro/contains">
             <span>contains</span>
+         </a>
+      </li>
+      <li>
+         <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">
+            <span>contingently related to</span>
          </a>
       </li>
       <li>
@@ -201,34 +211,13 @@ This section provides details for each class and property defined by FARO.
          </a>
       </li>
       <li>
-         <a href="#is_comparatively_related_to" title="http://purl.org/faro/is_comparatively_related_to">
-            <span>is comparatively related to</span>
-         </a>
-      </li>
-      <li>
-         <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">
-            <span>is contingently related to</span>
-         </a>
-      </li>
-      <li>
-         <a href="#is_mereologically_related_to"
-            title="http://purl.org/faro/is_mereologically_related_to">
-            <span>is mereologically related to</span>
-         </a>
-      </li>
-      <li>
-         <a href="#is_related_to" title="http://purl.org/faro/is_related_to">
-            <span>is related to</span>
-         </a>
-      </li>
-      <li>
-         <a href="#is_temporally_related_to" title="http://purl.org/faro/is_temporally_related_to">
-            <span>is temporally related to</span>
-         </a>
-      </li>
-      <li>
          <a href="#meets" title="http://purl.org/faro/meets">
             <span>meets</span>
+         </a>
+      </li>
+      <li>
+         <a href="#mereologically_related_to" title="http://purl.org/faro/mereologically_related_to">
+            <span>mereologically related to</span>
          </a>
       </li>
       <li>
@@ -257,6 +246,11 @@ This section provides details for each class and property defined by FARO.
          </a>
       </li>
       <li>
+         <a href="#related_to" title="http://purl.org/faro/related_to">
+            <span>related to</span>
+         </a>
+      </li>
+      <li>
          <a href="#results_in" title="http://purl.org/faro/results_in">
             <span>results in</span>
          </a>
@@ -282,6 +276,11 @@ This section provides details for each class and property defined by FARO.
          </a>
       </li>
       <li>
+         <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">
+            <span>temporally related to</span>
+         </a>
+      </li>
+      <li>
          <a href="#variation_of" title="http://purl.org/faro/variation_of">
             <span>variation of</span>
          </a>
@@ -301,7 +300,13 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_comparatively_related_to" title="http://purl.org/faro/is_comparatively_related_to">is comparatively related to</a>
+               <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">comparatively related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#alternative_to" title="http://purl.org/faro/alternative_to">alternative to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#alternative_to" title="http://purl.org/faro/alternative_to">alternative to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -318,7 +323,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_temporally_related_to" title="http://purl.org/faro/is_temporally_related_to">is temporally related to</a>
+               <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
@@ -343,13 +348,46 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">is contingently related to</a>
+               <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">contingently related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#correlates_with" title="http://purl.org/faro/correlates_with">correlates with</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#causes" title="http://purl.org/faro/causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="comparatively_related_to">
+      <h3>comparatively related to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/comparatively_related_to</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#related_to" title="http://purl.org/faro/related_to">related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#alternative_to" title="http://purl.org/faro/alternative_to">alternative to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#compared_to" title="http://purl.org/faro/compared_to">compared to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#competes_with" title="http://purl.org/faro/competes_with">competes with</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#contrasting_version_of" title="http://purl.org/faro/contrasting_version_of">contrasting version of</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -365,7 +403,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_comparatively_related_to" title="http://purl.org/faro/is_comparatively_related_to">is comparatively related to</a>
+               <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">comparatively related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
@@ -388,7 +426,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_comparatively_related_to" title="http://purl.org/faro/is_comparatively_related_to">is comparatively related to</a>
+               <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">comparatively related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -405,13 +443,39 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_temporally_related_to" title="http://purl.org/faro/is_temporally_related_to">is temporally related to</a>
+               <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#ends" title="http://purl.org/faro/ends">ends</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#starts" title="http://purl.org/faro/starts">starts</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="contingently_related_to">
+      <h3>contingently related to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/contingently_related_to</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#related_to" title="http://purl.org/faro/related_to">related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#causes" title="http://purl.org/faro/causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#correlates_with" title="http://purl.org/faro/correlates_with">correlates with</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#does_not_cause" title="http://purl.org/faro/does_not_cause">does not cause</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#enables" title="http://purl.org/faro/enables">enables</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intends_to_cause" title="http://purl.org/faro/intends_to_cause">intends to cause</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -428,7 +492,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_comparatively_related_to" title="http://purl.org/faro/is_comparatively_related_to">is comparatively related to</a>
+               <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">comparatively related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -448,8 +512,13 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_mereologically_related_to"
-                  title="http://purl.org/faro/is_mereologically_related_to">is mereologically related to</a>
+               <a href="#mereologically_related_to" title="http://purl.org/faro/mereologically_related_to">mereologically related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#coreference_of" title="http://purl.org/faro/coreference_of">coreference of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#coreference_of" title="http://purl.org/faro/coreference_of">coreference of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -469,7 +538,13 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">is contingently related to</a>
+               <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">contingently related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#correlates_with" title="http://purl.org/faro/correlates_with">correlates with</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#correlates_with" title="http://purl.org/faro/correlates_with">correlates with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -497,6 +572,12 @@ This section provides details for each class and property defined by FARO.
                <a href="#opposite_to" title="http://purl.org/faro/opposite_to">opposite to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#dissimilar_to" title="http://purl.org/faro/dissimilar_to">dissimilar to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#dissimilar_to" title="http://purl.org/faro/dissimilar_to">dissimilar to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -511,7 +592,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">is contingently related to</a>
+               <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">contingently related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
@@ -541,7 +622,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">is contingently related to</a>
+               <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">contingently related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -575,145 +656,13 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">is contingently related to</a>
+               <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">contingently related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="is_comparatively_related_to">
-      <h3>is comparatively related to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/faro/is_comparatively_related_to</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#alternative_to" title="http://purl.org/faro/alternative_to">alternative to</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#compared_to" title="http://purl.org/faro/compared_to">compared to</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#competes_with" title="http://purl.org/faro/competes_with">competes with</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#contrasting_version_of" title="http://purl.org/faro/contrasting_version_of">contrasting version of</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="is_contingently_related_to">
-      <h3>is contingently related to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/faro/is_contingently_related_to</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#causes" title="http://purl.org/faro/causes">causes</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#correlates_with" title="http://purl.org/faro/correlates_with">correlates with</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#does_not_cause" title="http://purl.org/faro/does_not_cause">does not cause</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#enables" title="http://purl.org/faro/enables">enables</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#intends_to_cause" title="http://purl.org/faro/intends_to_cause">intends to cause</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="is_mereologically_related_to">
-      <h3>is mereologically related to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/faro/is_mereologically_related_to</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#coreference_of" title="http://purl.org/faro/coreference_of">coreference of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#part_of" title="http://purl.org/faro/part_of">part of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#re-emerges_in" title="http://purl.org/faro/re-emerges_in">re emerges in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#variation_of" title="http://purl.org/faro/variation_of">variation of</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="is_related_to">
-      <h3>is related to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/faro/is_related_to</p>
-      <div class="description">
-         <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#is_comparatively_related_to" title="http://purl.org/faro/is_comparatively_related_to">is comparatively related to</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#is_contingently_related_to" title="http://purl.org/faro/is_contingently_related_to">is contingently related to</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#is_mereologically_related_to"
-                  title="http://purl.org/faro/is_mereologically_related_to">is mereologically related to</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#is_temporally_related_to" title="http://purl.org/faro/is_temporally_related_to">is temporally related to</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="is_temporally_related_to">
-      <h3>is temporally related to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/faro/is_temporally_related_to</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#is_related_to" title="http://purl.org/faro/is_related_to">is related to</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#before" title="http://purl.org/faro/before">before</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#contains" title="http://purl.org/faro/contains">contains</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#overlaps" title="http://purl.org/faro/overlaps">overlaps</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#simoultaneous_to" title="http://purl.org/faro/simoultaneous_to">simoultaneous to</a>
-               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -730,6 +679,31 @@ This section provides details for each class and property defined by FARO.
             <dt>has super-properties</dt>
             <dd>
                <a href="#before" title="http://purl.org/faro/before">before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mereologically_related_to">
+      <h3>mereologically related to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/mereologically_related_to</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#related_to" title="http://purl.org/faro/related_to">related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#coreference_of" title="http://purl.org/faro/coreference_of">coreference of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#part_of" title="http://purl.org/faro/part_of">part of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#re-emerges_in" title="http://purl.org/faro/re-emerges_in">re emerges in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#variation_of" title="http://purl.org/faro/variation_of">variation of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -752,6 +726,12 @@ This section provides details for each class and property defined by FARO.
                <a href="#dissimilar_to" title="http://purl.org/faro/dissimilar_to">dissimilar to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#opposite_to" title="http://purl.org/faro/opposite_to">opposite to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#opposite_to" title="http://purl.org/faro/opposite_to">opposite to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -766,7 +746,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_temporally_related_to" title="http://purl.org/faro/is_temporally_related_to">is temporally related to</a>
+               <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -786,8 +766,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_mereologically_related_to"
-                  title="http://purl.org/faro/is_mereologically_related_to">is mereologically related to</a>
+               <a href="#mereologically_related_to" title="http://purl.org/faro/mereologically_related_to">mereologically related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -829,8 +808,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_mereologically_related_to"
-                  title="http://purl.org/faro/is_mereologically_related_to">is mereologically related to</a>
+               <a href="#mereologically_related_to" title="http://purl.org/faro/mereologically_related_to">mereologically related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
@@ -841,6 +819,36 @@ This section provides details for each class and property defined by FARO.
             <dt>has range</dt>
             <dd>
                <a href="#Event" title="http://purl.org/faro/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="related_to">
+      <h3>related to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/related_to</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">comparatively related to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#contingently_related_to" title="http://purl.org/faro/contingently_related_to">contingently related to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#mereologically_related_to" title="http://purl.org/faro/mereologically_related_to">mereologically related to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Relata" title="http://purl.org/faro/Relata">Relata</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -887,6 +895,12 @@ This section provides details for each class and property defined by FARO.
                <a href="#compared_to" title="http://purl.org/faro/compared_to">compared to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#similar_to" title="http://purl.org/faro/similar_to">similar to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#similar_to" title="http://purl.org/faro/similar_to">similar to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -901,7 +915,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_temporally_related_to" title="http://purl.org/faro/is_temporally_related_to">is temporally related to</a>
+               <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -946,6 +960,31 @@ This section provides details for each class and property defined by FARO.
          </dl>
       </div>
    </div>
+   <div class="entity" id="temporally_related_to">
+      <h3>temporally related to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/temporally_related_to</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#related_to" title="http://purl.org/faro/related_to">related to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#before" title="http://purl.org/faro/before">before</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#contains" title="http://purl.org/faro/contains">contains</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#overlaps" title="http://purl.org/faro/overlaps">overlaps</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#simoultaneous_to" title="http://purl.org/faro/simoultaneous_to">simoultaneous to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="variation_of">
       <h3>variation of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -957,8 +996,7 @@ This section provides details for each class and property defined by FARO.
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#is_mereologically_related_to"
-                  title="http://purl.org/faro/is_mereologically_related_to">is mereologically related to</a>
+               <a href="#mereologically_related_to" title="http://purl.org/faro/mereologically_related_to">mereologically related to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
