@@ -119,6 +119,10 @@
 }, {
   "@id" : "http://purl.org/faro/alternative_to",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects two Relata entities which are altenative one each other, and cannot be happened together.\n\nExample: The result of the final will decide if *Italy would obtain its second Euro Cup*, or if *England would be the one to get the title*."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/comparatively_related_to"
   }, {
@@ -130,6 +134,10 @@
 }, {
   "@id" : "http://purl.org/faro/before",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event happening before with one happening after"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/temporally_related_to"
   } ],
@@ -141,6 +149,10 @@
 }, {
   "@id" : "http://purl.org/faro/causes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connect an event with its effect"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/faro/Event"
   } ],
@@ -165,19 +177,21 @@
   } ]
 }, {
   "@id" : "http://purl.org/faro/compared_to",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/faro/comparatively_related_to"
-  } ]
-}, {
-  "@id" : "http://purl.org/faro/competes_with",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects two Relata entities which are somehow compared.\n\nExample: this financial crisis have points in commons with the one of 2007."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/comparatively_related_to"
   } ]
 }, {
   "@id" : "http://purl.org/faro/contains",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects with an event happening during the subject"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/temporally_related_to"
   } ]
@@ -190,12 +204,20 @@
 }, {
   "@id" : "http://purl.org/faro/contrasting_version_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects two Relata entities which are two contrasting version of the same real-world event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/comparatively_related_to"
   } ]
 }, {
   "@id" : "http://purl.org/faro/coreference_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects 2 different mentions of the same event in the text."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/mereologically_related_to"
   }, {
@@ -207,6 +229,10 @@
 }, {
   "@id" : "http://purl.org/faro/correlates_with",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects two Relata entities with a common cause"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/contingently_related_to"
   }, {
@@ -218,6 +244,10 @@
 }, {
   "@id" : "http://purl.org/faro/dissimilar_to",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects two Relata entities which are dissimilar."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/compared_to"
   }, {
@@ -229,6 +259,10 @@
 }, {
   "@id" : "http://purl.org/faro/does_not_cause",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event with a Relata entity which is declared to not be an effect of it.\n\nExample: Doctors exclude that *vaccination* was the cause of *his death*."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/faro/Event"
   } ],
@@ -238,12 +272,20 @@
 }, {
   "@id" : "http://purl.org/faro/enables",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connect a condition with the event it is contributing to realise as an enabling factor.\n\nExample: *Having 1,90m of height* helped the golkeeper to *easily save the goal*."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/contingently_related_to"
   } ]
 }, {
   "@id" : "http://purl.org/faro/ends",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects with an event starting during the subject, with which shares the end."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/contains"
   } ]
@@ -256,6 +298,10 @@
 }, {
   "@id" : "http://purl.org/faro/intends_to_cause",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an Event with the effect it is intended to cause (independently if the result is achieved or not).\n\nExample: The government *voted a law*, in the attempt of *reducing unemployment*."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/faro/Event"
   } ],
@@ -265,6 +311,10 @@
 }, {
   "@id" : "http://purl.org/faro/meets",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects with an event which has the start coincident with the end of the subject"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/before"
   } ]
@@ -283,6 +333,10 @@
 }, {
   "@id" : "http://purl.org/faro/opposite_to",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects two Relata entities which are declared to be opposite, even if they may be both happened.\n\nExample: *the performance of Michael* has been the opposite of *Edward's one*."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/dissimilar_to"
   }, {
@@ -293,13 +347,21 @@
   } ]
 }, {
   "@id" : "http://purl.org/faro/overlaps",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects two events happening together for a portion of the lifetime of both of them."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/temporally_related_to"
   } ]
 }, {
   "@id" : "http://purl.org/faro/part_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects an Event with is sub-event"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/mereologically_related_to"
   } ]
@@ -318,7 +380,11 @@
 }, {
   "@id" : "http://purl.org/faro/prevents",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connect a Relata entity with the event for which is the cause of not happening.\n\nExample: the *strike* was sufficient to block the *changement in working conditions*."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/faro/Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
@@ -327,6 +393,10 @@
 }, {
   "@id" : "http://purl.org/faro/re-emerges_in",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects recurrent events.\n\nExample: Olympic games, frequent natural disasters, ..."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/faro/Event"
   } ],
@@ -348,6 +418,9 @@
 }, {
   "@id" : "http://purl.org/faro/results_in",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The RDF triple which represents the condition."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/faro/Condition"
   } ],
@@ -357,6 +430,10 @@
 }, {
   "@id" : "http://purl.org/faro/similar_to",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property connects two Relata entities which are similar."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/compared_to"
   }, {
@@ -367,19 +444,30 @@
   } ]
 }, {
   "@id" : "http://purl.org/faro/simoultaneous_to",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects two events which happen in the same time, sharing both start and end."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/temporally_related_to"
   } ]
 }, {
   "@id" : "http://purl.org/faro/starts",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects with an event starting during the subject, with which shares the start."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/contains"
   } ]
 }, {
   "@id" : "http://purl.org/faro/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The current status of a Relata"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/faro/Relata"
   } ],
@@ -393,12 +481,22 @@
 }, {
   "@id" : "http://purl.org/faro/temporally_related_to",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/faro/Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/faro/Event"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/related_to"
   } ]
 }, {
   "@id" : "http://purl.org/faro/variation_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects with an event wich is thought to be a variation of.\n\nExample: Two tribunal cases which are referring each other"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/faro/mereologically_related_to"
   } ]

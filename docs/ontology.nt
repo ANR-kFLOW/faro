@@ -69,12 +69,14 @@
 _:genid1 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/comparatively_related_to> .
 <http://purl.org/faro/alternative_to> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/alternative_to> .
 <http://purl.org/faro/alternative_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/alternative_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects two Relata entities which are altenative one each other, and cannot be happened together.\n\nExample: The result of the final will decide if *Italy would obtain its second Euro Cup*, or if *England would be the one to get the title*."@en .
 # 
 # http://purl.org/faro/before
 <http://purl.org/faro/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/before> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/temporally_related_to> .
 <http://purl.org/faro/before> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/faro/contains> .
 <http://purl.org/faro/before> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/faro/simoultaneous_to> .
+<http://purl.org/faro/before> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event happening before with one happening after"@en .
 # 
 # http://purl.org/faro/causes
 <http://purl.org/faro/causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -89,6 +91,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/far
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/faro/correlates_with> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://purl.org/faro/causes> <http://www.w3.org/2000/01/rdf-schema#comment> "Connect an event with its effect"@en .
 # 
 # http://purl.org/faro/comparatively_related_to
 <http://purl.org/faro/comparatively_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -97,14 +100,13 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # http://purl.org/faro/compared_to
 <http://purl.org/faro/compared_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/compared_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/comparatively_related_to> .
-# 
-# http://purl.org/faro/competes_with
-<http://purl.org/faro/competes_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/faro/competes_with> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/comparatively_related_to> .
+<http://purl.org/faro/compared_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/compared_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects two Relata entities which are somehow compared.\n\nExample: this financial crisis have points in commons with the one of 2007."@en .
 # 
 # http://purl.org/faro/contains
 <http://purl.org/faro/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/temporally_related_to> .
+<http://purl.org/faro/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event happening during the subject"@en .
 # 
 # http://purl.org/faro/contingently_related_to
 <http://purl.org/faro/contingently_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -113,6 +115,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # http://purl.org/faro/contrasting_version_of
 <http://purl.org/faro/contrasting_version_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/contrasting_version_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/comparatively_related_to> .
+<http://purl.org/faro/contrasting_version_of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects two Relata entities which are two contrasting version of the same real-world event."@en .
 # 
 # http://purl.org/faro/coreference_of
 <http://purl.org/faro/coreference_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -121,6 +124,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid4 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/mereologically_related_to> .
 <http://purl.org/faro/coreference_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/coreference_of> .
 <http://purl.org/faro/coreference_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/coreference_of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects 2 different mentions of the same event in the text."@en .
 # 
 # http://purl.org/faro/correlates_with
 <http://purl.org/faro/correlates_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -130,6 +134,7 @@ _:genid5 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/conting
 <http://purl.org/faro/correlates_with> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/correlates_with> .
 <http://purl.org/faro/correlates_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
 <http://purl.org/faro/correlates_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/faro/correlates_with> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects two Relata entities with a common cause"@en .
 # 
 # http://purl.org/faro/dissimilar_to
 <http://purl.org/faro/dissimilar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -138,29 +143,35 @@ _:genid5 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/conting
 _:genid6 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/compared_to> .
 <http://purl.org/faro/dissimilar_to> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/dissimilar_to> .
 <http://purl.org/faro/dissimilar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/dissimilar_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects two Relata entities which are dissimilar."@en .
 # 
 # http://purl.org/faro/does_not_cause
 <http://purl.org/faro/does_not_cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contingently_related_to> .
 <http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+<http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event with a Relata entity which is declared to not be an effect of it.\n\nExample: Doctors exclude that *vaccination* was the cause of *his death*."@en .
 # 
 # http://purl.org/faro/enables
 <http://purl.org/faro/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/enables> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contingently_related_to> .
 <http://purl.org/faro/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://purl.org/faro/enables> <http://www.w3.org/2000/01/rdf-schema#comment> "Connect a condition with the event it is contributing to realise as an enabling factor.\n\nExample: *Having 1,90m of height* helped the golkeeper to *easily save the goal*."@en .
 # 
 # http://purl.org/faro/ends
 <http://purl.org/faro/ends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/ends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contains> .
+<http://purl.org/faro/ends> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event starting during the subject, with which shares the end."@en .
 # 
 # http://purl.org/faro/intends_to_cause
 <http://purl.org/faro/intends_to_cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/intends_to_cause> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contingently_related_to> .
 <http://purl.org/faro/intends_to_cause> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+<http://purl.org/faro/intends_to_cause> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an Event with the effect it is intended to cause (independently if the result is achieved or not).\n\nExample: The government *voted a law*, in the attempt of *reducing unemployment*."@en .
 # 
 # http://purl.org/faro/meets
 <http://purl.org/faro/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/before> .
+<http://purl.org/faro/meets> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event which has the start coincident with the end of the subject"@en .
 # 
 # http://purl.org/faro/mereologically_related_to
 <http://purl.org/faro/mereologically_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -173,27 +184,33 @@ _:genid6 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/compare
 _:genid7 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/dissimilar_to> .
 <http://purl.org/faro/opposite_to> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/opposite_to> .
 <http://purl.org/faro/opposite_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/opposite_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects two Relata entities which are declared to be opposite, even if they may be both happened.\n\nExample: *the performance of Michael* has been the opposite of *Edward's one*."@en .
 # 
 # http://purl.org/faro/overlaps
 <http://purl.org/faro/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/overlaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/temporally_related_to> .
+<http://purl.org/faro/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/overlaps> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects two events happening together for a portion of the lifetime of both of them."@en .
 # 
 # http://purl.org/faro/part_of
 <http://purl.org/faro/part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/part_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/mereologically_related_to> .
 <http://purl.org/faro/part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/faro/part_of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects an Event with is sub-event"@en .
 # 
 # http://purl.org/faro/prevents
 <http://purl.org/faro/prevents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/prevents> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/does_not_cause> .
 <http://purl.org/faro/prevents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
-<http://purl.org/faro/prevents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+<http://purl.org/faro/prevents> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Event> .
+<http://purl.org/faro/prevents> <http://www.w3.org/2000/01/rdf-schema#comment> "Connect a Relata entity with the event for which is the cause of not happening.\n\nExample: the *strike* was sufficient to block the *changement in working conditions*."@en .
 # 
 # http://purl.org/faro/re-emerges_in
 <http://purl.org/faro/re-emerges_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/mereologically_related_to> .
 <http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
 <http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Event> .
+<http://purl.org/faro/re-emerges_in> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects recurrent events.\n\nExample: Olympic games, frequent natural disasters, ..."@en .
 # 
 # http://purl.org/faro/related_to
 <http://purl.org/faro/related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -204,6 +221,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/dissimi
 <http://purl.org/faro/results_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/results_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Condition> .
 <http://purl.org/faro/results_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://purl.org/faro/results_in> <http://www.w3.org/2000/01/rdf-schema#comment> "The RDF triple which represents the condition." .
 # 
 # http://purl.org/faro/similar_to
 <http://purl.org/faro/similar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -212,28 +230,36 @@ _:genid7 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/dissimi
 _:genid8 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/compared_to> .
 <http://purl.org/faro/similar_to> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/similar_to> .
 <http://purl.org/faro/similar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/similar_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects two Relata entities which are similar."@en .
 # 
 # http://purl.org/faro/simoultaneous_to
 <http://purl.org/faro/simoultaneous_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/simoultaneous_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/temporally_related_to> .
+<http://purl.org/faro/simoultaneous_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/faro/simoultaneous_to> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects two events which happen in the same time, sharing both start and end."@en .
 # 
 # http://purl.org/faro/starts
 <http://purl.org/faro/starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/starts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contains> .
+<http://purl.org/faro/starts> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event starting during the subject, with which shares the start."@en .
 # 
 # http://purl.org/faro/status
 <http://purl.org/faro/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Relata> .
 <http://purl.org/faro/status> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Status> .
+<http://purl.org/faro/status> <http://www.w3.org/2000/01/rdf-schema#comment> "The current status of a Relata" .
 <http://purl.org/faro/status> <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # 
 # http://purl.org/faro/temporally_related_to
 <http://purl.org/faro/temporally_related_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/temporally_related_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/related_to> .
+<http://purl.org/faro/temporally_related_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
+<http://purl.org/faro/temporally_related_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/faro/Event> .
 # 
 # http://purl.org/faro/variation_of
 <http://purl.org/faro/variation_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/variation_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/mereologically_related_to> .
+<http://purl.org/faro/variation_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event wich is thought to be a variation of.\n\nExample: Two tribunal cases which are referring each other"@en .
 # 
 # 
 # 

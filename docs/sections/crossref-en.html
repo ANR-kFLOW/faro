@@ -60,13 +60,15 @@ This section provides details for each class and property defined by FARO.
             <a href="#causes" title="http://purl.org/faro/causes">causes</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#does_not_cause" title="http://purl.org/faro/does_not_cause">does not cause</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#intends_to_cause" title="http://purl.org/faro/intends_to_cause">intends to cause</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#prevents" title="http://purl.org/faro/prevents">prevents</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#re-emerges_in" title="http://purl.org/faro/re-emerges_in">re emerges in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#re-emerges_in" title="http://purl.org/faro/re-emerges_in">re emerges in</a>
+            <a href="#prevents" title="http://purl.org/faro/prevents">prevents</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#re-emerges_in" title="http://purl.org/faro/re-emerges_in">re emerges in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#temporally_related_to" title="http://purl.org/faro/temporally_related_to">temporally related to</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -153,11 +155,6 @@ This section provides details for each class and property defined by FARO.
       <li>
          <a href="#compared_to" title="http://purl.org/faro/compared_to">
             <span>compared to</span>
-         </a>
-      </li>
-      <li>
-         <a href="#competes_with" title="http://purl.org/faro/competes_with">
-            <span>competes with</span>
          </a>
       </li>
       <li>
@@ -293,6 +290,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/alternative_to</p>
+      <div class="comment">
+         <span class="markdown">This property connects two Relata entities which are altenative one each other, and cannot be happened together.
+
+Example: The result of the final will decide if *Italy would obtain its second Euro Cup*, or if *England would be the one to get the title*.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -319,6 +321,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/before</p>
+      <div class="comment">
+         <span class="markdown">Connects an event happening before with one happening after</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -341,6 +346,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/causes</p>
+      <div class="comment">
+         <span class="markdown">Connect an event with its effect</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -385,7 +393,6 @@ This section provides details for each class and property defined by FARO.
             <dd>
                <a href="#alternative_to" title="http://purl.org/faro/alternative_to">alternative to</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#compared_to" title="http://purl.org/faro/compared_to">compared to</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#competes_with" title="http://purl.org/faro/competes_with">competes with</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#contrasting_version_of" title="http://purl.org/faro/contrasting_version_of">contrasting version of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
@@ -399,7 +406,15 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/compared_to</p>
+      <div class="comment">
+         <span class="markdown">This property connects two Relata entities which are somehow compared.
+
+Example: this financial crisis have points in commons with the one of 2007.</span>
+      </div>
       <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
@@ -415,23 +430,6 @@ This section provides details for each class and property defined by FARO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="competes_with">
-      <h3>competes with<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/faro/competes_with</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#comparatively_related_to" title="http://purl.org/faro/comparatively_related_to">comparatively related to</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="contains">
       <h3>contains<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -439,6 +437,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/contains</p>
+      <div class="comment">
+         <span class="markdown">Connects with an event happening during the subject</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -488,6 +489,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/contrasting_version_of</p>
+      <div class="comment">
+         <span class="markdown">This property connects two Relata entities which are two contrasting version of the same real-world event.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -505,6 +509,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/coreference_of</p>
+      <div class="comment">
+         <span class="markdown">This property connects 2 different mentions of the same event in the text.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -531,6 +538,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/correlates_with</p>
+      <div class="comment">
+         <span class="markdown">Connects two Relata entities with a common cause</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -557,6 +567,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/dissimilar_to</p>
+      <div class="comment">
+         <span class="markdown">This property connects two Relata entities which are dissimilar.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -588,6 +601,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/does_not_cause</p>
+      <div class="comment">
+         <span class="markdown">Connects an event with a Relata entity which is declared to not be an effect of it.
+
+Example: Doctors exclude that *vaccination* was the cause of *his death*.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -615,6 +633,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/enables</p>
+      <div class="comment">
+         <span class="markdown">Connect a condition with the event it is contributing to realise as an enabling factor.
+
+Example: *Having 1,90m of height* helped the golkeeper to *easily save the goal*.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -635,6 +658,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/ends</p>
+      <div class="comment">
+         <span class="markdown">Connects with an event starting during the subject, with which shares the end.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -652,6 +678,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/intends_to_cause</p>
+      <div class="comment">
+         <span class="markdown">Connects an Event with the effect it is intended to cause (independently if the result is achieved or not).
+
+Example: The government *voted a law*, in the attempt of *reducing unemployment*.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -674,6 +705,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/meets</p>
+      <div class="comment">
+         <span class="markdown">Connects with an event which has the start coincident with the end of the subject</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -716,6 +750,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/opposite_to</p>
+      <div class="comment">
+         <span class="markdown">This property connects two Relata entities which are declared to be opposite, even if they may be both happened.
+
+Example: *the performance of Michael* has been the opposite of *Edward's one*.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -742,7 +781,13 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/overlaps</p>
+      <div class="comment">
+         <span class="markdown">Connects two events happening together for a portion of the lifetime of both of them.</span>
+      </div>
       <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
@@ -759,6 +804,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/part_of</p>
+      <div class="comment">
+         <span class="markdown">This property connects an Event with is sub-event</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -779,6 +827,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/prevents</p>
+      <div class="comment">
+         <span class="markdown">Connect a Relata entity with the event for which is the cause of not happening.
+
+Example: the *strike* was sufficient to block the *changement in working conditions*.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -789,7 +842,7 @@ This section provides details for each class and property defined by FARO.
                <a href="#does_not_cause" title="http://purl.org/faro/does_not_cause">does not cause</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
-            <dt>has domain</dt>
+            <dt>has range</dt>
             <dd>
                <a href="#Event" title="http://purl.org/faro/Event">Event</a>
                <sup class="type-c" title="class">c</sup>
@@ -804,6 +857,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/re-emerges_in</p>
+      <div class="comment">
+         <span class="markdown">This property connects recurrent events.
+
+Example: Olympic games, frequent natural disasters, ...</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -861,6 +919,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/results_in</p>
+      <div class="comment">
+         <span class="markdown">The RDF triple which represents the condition.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -885,6 +946,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/similar_to</p>
+      <div class="comment">
+         <span class="markdown">This property connects two Relata entities which are similar.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:
@@ -911,7 +975,13 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/simoultaneous_to</p>
+      <div class="comment">
+         <span class="markdown">Connects two events which happen in the same time, sharing both start and end.</span>
+      </div>
       <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
@@ -928,6 +998,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/starts</p>
+      <div class="comment">
+         <span class="markdown">Connects with an event starting during the subject, with which shares the start.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -945,6 +1018,9 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/status</p>
+      <div class="comment">
+         <span class="markdown">The current status of a Relata</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -982,6 +1058,16 @@ This section provides details for each class and property defined by FARO.
                <sup class="type-op" title="object property">op</sup>, <a href="#simoultaneous_to" title="http://purl.org/faro/simoultaneous_to">simoultaneous to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Event" title="http://purl.org/faro/Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -992,6 +1078,11 @@ This section provides details for each class and property defined by FARO.
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/faro/variation_of</p>
+      <div class="comment">
+         <span class="markdown">Connects with an event wich is thought to be a variation of.
+
+Example: Two tribunal cases which are referring each other</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
