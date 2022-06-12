@@ -167,6 +167,11 @@ _:genid6 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/compare
 <http://purl.org/faro/ends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contains> .
 <http://purl.org/faro/ends> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event starting during the subject, with which shares the end."@en .
 # 
+# http://purl.org/faro/immediately_before
+<http://purl.org/faro/immediately_before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/immediately_before> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/before> .
+<http://purl.org/faro/immediately_before> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event happening immediately before with one happening after"@en .
+# 
 # http://purl.org/faro/intends_to_cause
 <http://purl.org/faro/intends_to_cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/intends_to_cause> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contingently_related_to> .
@@ -175,7 +180,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/compare
 # 
 # http://purl.org/faro/meets
 <http://purl.org/faro/meets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/faro/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/before> .
+<http://purl.org/faro/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/immediately_before> .
 <http://purl.org/faro/meets> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with an event which has the start coincident with the end of the subject"@en .
 # 
 # http://purl.org/faro/mereologically_related_to

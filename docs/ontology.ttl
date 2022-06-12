@@ -189,6 +189,12 @@ Example: *Having 1,90m of height* helped the golkeeper to *easily save the goal*
       rdfs:comment "Connects with an event starting during the subject, with which shares the end."@en .
 
 
+###  http://purl.org/faro/immediately_before
+:immediately_before rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :before ;
+                    rdfs:comment "Connects an event happening immediately before with one happening after"@en .
+
+
 ###  http://purl.org/faro/intends_to_cause
 :intends_to_cause rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :contingently_related_to ;
@@ -200,7 +206,7 @@ Example: The government *voted a law*, in the attempt of *reducing unemployment*
 
 ###  http://purl.org/faro/meets
 :meets rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf :before ;
+       rdfs:subPropertyOf :immediately_before ;
        rdfs:comment "Connects with an event which has the start coincident with the end of the subject"@en .
 
 

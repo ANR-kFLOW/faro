@@ -306,6 +306,16 @@
     "@id" : "http://purl.org/faro/Status"
   } ]
 }, {
+  "@id" : "http://purl.org/faro/immediately_before",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects an event happening immediately before with one happening after"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/faro/before"
+  } ]
+}, {
   "@id" : "http://purl.org/faro/intends_to_cause",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -326,7 +336,7 @@
     "@value" : "Connects with an event which has the start coincident with the end of the subject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/faro/before"
+    "@id" : "http://purl.org/faro/immediately_before"
   } ]
 }, {
   "@id" : "http://purl.org/faro/mereologically_related_to",

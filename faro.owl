@@ -185,6 +185,12 @@ faro:ends rdf:type owl:ObjectProperty ;
           rdfs:comment "Connects with an event starting during the subject, with which shares the end."@en .
 
 
+###  http://purl.org/faro/immediately_before
+faro:immediately_before rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf faro:before ;
+                        rdfs:comment "Connects an event happening immediately before with one happening after"@en .
+
+
 ###  http://purl.org/faro/intends_to_cause
 faro:intends_to_cause rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf faro:contingently_related_to ;
@@ -196,7 +202,7 @@ Example: The government *voted a law*, in the attempt of *reducing unemployment*
 
 ###  http://purl.org/faro/meets
 faro:meets rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf faro:before ;
+           rdfs:subPropertyOf faro:immediately_before ;
            rdfs:comment "Connects with an event which has the start coincident with the end of the subject"@en .
 
 

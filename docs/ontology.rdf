@@ -320,6 +320,16 @@ Example: *Having 1,90m of height* helped the golkeeper to *easily save the goal*
     
 
 
+    <!-- http://purl.org/faro/immediately_before -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/faro/immediately_before">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/before"/>
+        <rdfs:comment xml:lang="en">Connects an event happening immediately before with one happening after</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/faro/intends_to_cause -->
 
 
@@ -337,7 +347,7 @@ Example: The government *voted a law*, in the attempt of *reducing unemployment*
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/faro/meets">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/before"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/faro/immediately_before"/>
         <rdfs:comment xml:lang="en">Connects with an event which has the start coincident with the end of the subject</rdfs:comment>
     </owl:ObjectProperty>
     

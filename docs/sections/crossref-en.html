@@ -208,6 +208,11 @@ This section provides details for each class and property defined by FARO.
          </a>
       </li>
       <li>
+         <a href="#immediately_before" title="http://purl.org/faro/immediately_before">
+            <span>immediately before</span>
+         </a>
+      </li>
+      <li>
          <a href="#intends_to_cause" title="http://purl.org/faro/intends_to_cause">
             <span>intends to cause</span>
          </a>
@@ -338,7 +343,7 @@ Example: The result of the final will decide if *Italy would obtain its second E
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#meets" title="http://purl.org/faro/meets">meets</a>
+               <a href="#immediately_before" title="http://purl.org/faro/immediately_before">immediately before</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -697,6 +702,31 @@ Example: *Having 1,90m of height* helped the golkeeper to *easily save the goal*
          </dl>
       </div>
    </div>
+   <div class="entity" id="immediately_before">
+      <h3>immediately before<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/faro/immediately_before</p>
+      <div class="comment">
+         <span class="markdown">Connects an event happening immediately before with one happening after</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#before" title="http://purl.org/faro/before">before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#meets" title="http://purl.org/faro/meets">meets</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="intends_to_cause">
       <h3>intends to cause<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -738,7 +768,7 @@ Example: The government *voted a law*, in the attempt of *reducing unemployment*
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#before" title="http://purl.org/faro/before">before</a>
+               <a href="#immediately_before" title="http://purl.org/faro/immediately_before">immediately before</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
