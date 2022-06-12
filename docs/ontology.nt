@@ -151,6 +151,11 @@ _:genid6 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/faro/compare
 <http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/faro/Event> .
 <http://purl.org/faro/does_not_cause> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an event with a Relata entity which is declared to not be an effect of it.\n\nExample: Doctors exclude that *vaccination* was the cause of *his death*."@en .
 # 
+# http://purl.org/faro/does_not_prevent
+<http://purl.org/faro/does_not_prevent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/faro/does_not_prevent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contingently_related_to> .
+<http://purl.org/faro/does_not_prevent> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects with a event which happened despite the subject."@en .
+# 
 # http://purl.org/faro/enables
 <http://purl.org/faro/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/faro/enables> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/faro/contingently_related_to> .

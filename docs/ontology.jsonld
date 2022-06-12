@@ -270,6 +270,16 @@
     "@id" : "http://purl.org/faro/contingently_related_to"
   } ]
 }, {
+  "@id" : "http://purl.org/faro/does_not_prevent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects with a event which happened despite the subject."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/faro/contingently_related_to"
+  } ]
+}, {
   "@id" : "http://purl.org/faro/enables",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

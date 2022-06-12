@@ -164,6 +164,12 @@ faro:does_not_cause rdf:type owl:ObjectProperty ;
 Example: Doctors exclude that *vaccination* was the cause of *his death*."""@en .
 
 
+###  http://purl.org/faro/does_not_prevent
+faro:does_not_prevent rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf faro:contingently_related_to ;
+                      rdfs:comment "Connects with a event which happened despite the subject."@en .
+
+
 ###  http://purl.org/faro/enables
 faro:enables rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf faro:contingently_related_to ;

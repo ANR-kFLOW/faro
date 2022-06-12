@@ -168,6 +168,12 @@ Example: this financial crisis have points in commons with the one of 2007."""@e
 Example: Doctors exclude that *vaccination* was the cause of *his death*."""@en .
 
 
+###  http://purl.org/faro/does_not_prevent
+:does_not_prevent rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :contingently_related_to ;
+                  rdfs:comment "Connects with a event which happened despite the subject."@en .
+
+
 ###  http://purl.org/faro/enables
 :enables rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :contingently_related_to ;
